@@ -1,0 +1,56 @@
+/* creado por Laura Adán, Abril 2021 */
+
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: black;
+}
+
+.ondulado 
+{
+	position: relative;
+	-webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0,0,0,0.2));
+}
+
+.ondulado span
+{
+	position: relative;
+	display: inline-block;
+	/* background añadido por cuenta propia-.prefijo webkit para que sea compatible
+	con todos los navegadores*/
+	background: linear-gradient(#8AC7CD,#B98ACD);
+   -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+	font-size: 3.5em;
+	text-transform: uppercase;
+	animation: animacionNuestra 1s ease-in-out infinite;
+	animation-delay: calc(0.1s * var(--i)); 
+}
+
+@keyframes animacionNuestra
+{
+	0%
+	{
+		transform: translateY(0px);
+	}
+	2%
+	{
+		transform: translateY(-20px);
+	}
+	40%, 100%
+	{
+		transform: translateY(0px);
+	}
+}
+
